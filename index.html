@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MALVESTIDA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            /* max-width: 767px; */
+            font-family: 'Signika', sans-serif;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        .nav-mobile {
+            display: flex;
+            max-width: 767px;
+            background-color: whitesmoke;
+        }
+
+        .nav-mobile_principal {
+            display: flex;
+            width: 100%;
+            height: 60px;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            position: fixed;
+            background-color: #fff;
+            top: 10;
+            left: 0;
+
+        }
+
+        .nav-mobile_imagen img {
+            width: 35px;
+            color: #8D6EFF;
+        }
+
+        .div-container_One {
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        .div-container-img {
+            width: 100%;
+        }
+
+        .div-container-img img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            margin-top: 33px;
+        }
+
+        .div-container_cultura {
+            font-family: 'Signika', sans-serif;
+            padding: 25px 0 0;
+        }
+
+        .div-container_cultura a {
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 1;
+            color: #8D6EFF;
+            text-decoration: none;
+        }
+
+        .div-container_cultura h3 {
+            margin: 15px 0 12px;
+            font-size: 35px;
+            line-height: 1.2;
+            font-weight: 600;
+        }
+
+        .div-container_cultura h3:hover {
+            color: #8D6EFF;
+        }
+
+        .div-cultura_p {
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.4;
+            margin: 0 0 15px;
+        }
+
+        .div-container_fecha {
+            color: #767676;
+            font-size: 14px;
+            font-weight: 600;
+            /* margin: 0 0 15px; */
+            border-bottom: 1px solid #ebebeb;
+            line-height: 3;
+        }
+
+        .title-container_two {
+            display: flex;
+            justify-content: flex-end;
+            color: #8D6EFF;
+            font-size: 28px;
+            font-weight: bold;
+            line-height: 33px;
+            margin: 10px 0 7px;
+        }
+
+        /*Background purple*/
+        .div-container_background-purple {
+            background-color: #8D6EFF;
+        }
+
+        .div-container_background-purple dos {
+            display: inline-block;
+            max-width: 758px;
+        }
+
+        .title-bpd {
+            color: #fff;
+            font-size: 24px;
+            padding: 29px 0 0 30px;
+        }
+
+        .container-ev_relaciones {
+            display: flex;
+            width: 100%;
+            height: 150px;
+        }
+
+        .div-container_seccion-4 {
+            display: flex;
+            color: #fff;
+            position: relative;
+            max-width: 90%;
+            z-index: 1;
+            align-items: center;
+        }
+
+        .div-img {
+            display: block;
+            /*verificar para eliminar*/
+            position: relative;
+            /*verificar para eliminar*/
+            max-width: 40%;
+        }
+
+        .div-img img {
+            display: block;
+            /*verificar para eliminar*/
+            position: relative;
+            /*verificar para eliminar*/
+            width: 90%;
+            margin: 30px;
+        }
+
+        .div-text {
+            display: flex;
+            flex-direction: column;
+            padding: 7px 34px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .div-text a {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .div-text h3 {
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+        .container-footer {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 50px;
+            align-items: center;
+            line-height: 2;
+        }
+
+        .container-footer a {
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .nav-mobile_rrss {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding: 30px;
+        }
+
+        .nav-mobile_rrss img {
+            margin-right: 50px;
+            height: 12px;
+        }
+
+        .container_prev-next {
+            display: flex;
+            align-items: center;
+            max-width: 100%;
+            margin: 0 60px;
+        }
+
+        .container_prev-next a {
+            /*mover etiqueta a donde va*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            background-color: #ebebeb;
+            color: #8D6EFF;
+            text-align: center;
+            line-height: 100px;
+            border-radius: 100px;
+            border: 1px solid #8D6EFF;
+            text-decoration: none;
+        }
+
+        .boton-arriba {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            border: none;
+            border-radius: 100px;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            color: #8D6EFF;
+            background-color: #8D6EFF;
+        }
+
+        @media (min-width: 768px) {
+            .nav-mobile {
+                display: flex;
+                width: 100%;
+                ;
+                background-color: whitesmoke;
+            }
+
+            .nav-mobile_imagen {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav-mobile" >
+        <ul class="nav-mobile_principal">
+            <li class="nav-mobile_imagen"><a href="./menu_mobile.html"><img src="./img/icon_menu.png"
+                        alt="icon_menu_mobile"></a></li>
+            <li><a href="/"><img src="./img/logo.png" alt="logo_malvestida"></a></li>
+            <li class="nav-mobile_imagen"><a href="./buscar.html"><img src="./img/icon_buscar_mobile.png"
+                        alt="icon_buscar"></a></li>
+        </ul>
+    </nav>
+
+    <div class="div-container_One">
+        <div class="div-container-img">
+            <img src="https://i0.wp.com/malvestida.com/wp-content/uploads/2023/09/portada_sitio_entrevista_entrevista_natalia.png?resize=768%2C567&ssl=1"
+                alt="">
+        </div>
+
+        <div class="div-container_cultura">
+            <a href="Cultura">Cultura</a>
+            <h3>Terror y maternidad: Platicamos con Natalia Solián, protagonista de Huesera</h3>
+            <p class="div-cultura_p">Una de las sorpresas fílmicas de este año fue Huesera, el primer largometraje de la
+                directora mexicana Michelle Garza Cervera: trata de una mujer...</p>
+            <p class="div-container_fecha">6 septiembre, 2023</p>
+        </div>
+    </div>
+
+    <div class="div-container_One">
+        <div class="div-container-img">
+            <h3 class="title-container_two">Lo más fresco</h3>
+            <img src="https://i0.wp.com/malvestida.com/wp-content/uploads/2023/09/Diseno-sin-titulo-4.png?resize=696%2C514&ssl=1"
+                alt="">
+        </div>
+
+        <div class="div-container_cultura">
+            <a href="Activismo">Activismo</a>
+            <h3>La SCJN declara inconstitucional la penalización del aborto a nivel federal</h3>
+            <p class="div-cultura_p">¡Saquen los pañuelos verdes! La declaración de la Suprema Corte de Justicia de la
+                Nación (SCJN) sobre la inconstitucionalidad de la penalización del aborto...</p>
+        </div>
+    </div>
+
+    <div class="div-container_One">
+        <div class="div-container-img">
+            <img src="https://i0.wp.com/malvestida.com/wp-content/uploads/2023/09/portada_it-1.png?resize=696%2C514&ssl=1"
+                alt="">
+        </div>
+
+        <div class="div-container_cultura">
+            <a href="Salud">Salud</a>
+            <h3>Coger no es un peligro: ¿cómo hablar de salud sexual e ITS sin estigmas ni fiscalización?</h3>
+            <p class="div-cultura_p">Uno de los principales estigmas que permea las narrativas sobre la salud sexual es
+                relacionar las infecciones de transmisión sexual (ITS) con ciertas poblaciones...</p>
+        </div>
+    </div>
+
+
+    <div class="div-container_One">
+        <div class="div-container-img">
+            <img src="https://i0.wp.com/malvestida.com/wp-content/uploads/2023/08/portada_sitio_adidas_superstar.png?resize=696%2C514&ssl=1"
+                alt="">
+        </div>
+
+        <div class="div-container_cultura">
+            <a href="Estilo de Vida">Estilo de Vida</a>
+            <h3>Cómo encontrar tu estilo: 4 creadoras comparten sus mejores consejos</h3>
+            <p class="div-cultura_p">¿Alguna vez te has preguntado cómo encontrar tu estilo? En un mundo que nos ofrece
+                inspiración infinita siempre ayuda conocer la experiencia de personas...</p>
+        </div>
+    </div>
+
+    <!--backgrpund purple (cambiar imagenes)-->
+    <div class="div-container_background-purple">
+        <div class="div-container_One">
+            <div class="div-container-img">
+                <img src="https://i0.wp.com/malvestida.com/wp-content/uploads/2022/05/tarot2_horizontal.jpg?resize=696%2C514&ssl=1"
+                    alt="">
+            </div>
+
+            <div class="div-container_cultura">
+                <a href="Estilo de vida">Estilo de vida</a>
+
+                <h3>Tipos de tarot: Una guía básica para conocerlos</h3>
+                <p class="div-cultura_p">Seguramente ya te habrás dado cuenta que existen diferentes tipos de tarot,
+                    incluso hay algunos temáticos y con ilustraciones...</p>
+                <p class="div-container_fecha">14 junio, 2022</p>
+            </div>
+        </div>
+
+        <div class="div-container_One">
+            <div class="div-container-img">
+                <img src="https://i0.wp.com/malvestida.com/wp-content/uploads/2023/01/template_portada_tarot.jpeg?resize=696%2C514&ssl=1"
+                    alt="">
+            </div>
+
+            <div class="div-container_cultura">
+                <a href="Estilo de vida">Estilo de vida</a>
+
+                <h3>Las ilustradoras detrás de dos de los mazos de tarot más famosos</h3>
+                <p class="div-cultura_p">Los mazos de Tarot más conocidos, Rider y Thoth, fueron ilustrados por encargo
+                    de sus autores. Las artistas e...</p>
+                <p class="div-container_fecha">17 enero, 2023</p>
+            </div>
+        </div>
+
+        <div class="div-container_One">
+            <div class="div-container-img">
+                <img
+                    src="https://i0.wp.com/malvestida.com/wp-content/uploads/2022/04/tarot_horizontal.jpg?resize=696%2C514&ssl=1">
+            </div>
+
+            <div class="div-container_cultura">
+                <a href="Estilo de vida">Estilo de vida</a>
+
+                <h3>Cartas de tarot bonitas: 11 mazos para conocerte mejor</h3>
+                <p class="div-cultura_p">Desde sus inicios, las cartas de tarot han sido un espacio donde habitan las
+                    creaciones artísticas y creativas, y... </p>
+                <p class="div-container_fecha">26 abril, 2022</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Background white, agragar clase al div principal -->
+    <div class="div-container_One">
+        <div class="div-container-img">
+            <img src="https://i0.wp.com/malvestida.com/wp-content/uploads/2023/08/portada_sitio_adidas_superstar.png?resize=696%2C514&ssl=1"
+                alt="">
+        </div>
+
+        <div class="div-container_cultura">
+            <a href="Estilo de Vida">Estilo de Vida</a>
+            <h3>Cómo encontrar tu estilo: 4 creadoras comparten sus mejores consejos</h3>
+            <p class="div-cultura_p">¿Alguna vez te has preguntado cómo encontrar tu estilo? En un mundo que nos ofrece
+                inspiración infinita siempre ayuda conocer la experiencia de personas...</p>
+            <p class="div-container_fecha">Redacción Malvestida - 29 agosto, 2023</p>
+        </div>
+
+        <div class="div-container-img">
+            <img src="https://i0.wp.com/malvestida.com/wp-content/uploads/2023/08/portada_sitio_orgasmo.png?resize=696%2C514&ssl=1"
+                alt="">
+        </div>
+
+        <div class="div-container_cultura">
+            <a href="Sexualidad">Sexualidad</a>
+            <h3>¿Cómo potenciar tus orgasmos y aumentar tu placer sexual? </h3>
+            <p class="div-cultura_p">Existen diversos factores por los cuales una persona no puede o se le dificulta
+                tener orgasmos. Si a ti también te pasa, no te...</p>
+            <p class="div-container_fecha">Arantza García - 22 agosto, 2023</p>
+        </div>
+
+        <div class="div-container-img">
+            <img src="https://i0.wp.com/malvestida.com/wp-content/uploads/2023/09/portada_it-1.png?resize=696%2C514&ssl=1"
+                alt="">
+        </div>
+        <div class="div-container_cultura">
+            <a href="Salud">Salud</a>
+            <h3>Coger no es un peligro: ¿cómo hablar de salud sexual e ITS sin estigmas ni fiscalización?</h3>
+            <p class="div-cultura_p">Uno de los principales estigmas que permea las narrativas sobre la salud sexual es
+                relacionar las infecciones de transmisión sexual (ITS) con ciertas poblaciones...</p>
+            <p class="div-container_fecha">Danielle Orendain - 4 septiembre, 2023</p>
+        </div>
+    </div>
+
+    <!--Background purple-->
+    <!--contenedor estilo de vida-->
+    <div class="div-container_background-purple dos">
+        <h3 class="title-bpd">Estilo de vida</h3>
+        <div class="div-container_seccion-4">
+            <div class="div-img">
+                <img src="https://i0.wp.com/malvestida.com/wp-content/uploads/2023/08/como-poner-limites.png?resize=696%2C514&ssl=1"
+                    alt="estilo de vida">
+            </div>
+            <div class="div-text">
+                <a href="Estilo de vida">Estilo de vida</a>
+                <h3>Cómo poner límites en el trabajo: una guía políticamente incorrecta</h3>
+                <p>Redacción Malvestida - 2 agosto, 2023</p>
+            </div>
+        </div>
+
+        <div class="div-container_seccion-4">
+            <div class="div-img">
+                <img
+                    src="https://i0.wp.com/malvestida.com/wp-content/uploads/2023/07/portadasitio_¿buenamadre_.png?resize=696%2C514&ssl=1">
+            </div>
+            <div class="div-text">
+                <a href="Estilo de vida">Estilo de vida</a>
+                <h3>¿Me impediría mi condición mental ser buena madre?</h3>
+                <p>Fernanda Latani M. Bravo - 27 julio, 2023</p>
+            </div>
+        </div>
+    </div>
+
+    <!--contenedor Relaciones-->
+    <div class="div-container_background-purple dos">
+        <h3 class="title-bpd">Relaciones</h3>
+        <div class="div-container_seccion-4">
+            <div class="div-img">
+                <img src="https://i0.wp.com/malvestida.com/wp-content/uploads/2023/07/abuso-emocional.png?resize=1068%2C789&ssl=1"
+                    alt="estilo de vida">
+            </div>
+            <div class="div-text">
+                <a href="Estilo de vida">Estilo de vida</a>
+                <h3>Abuso emocional de manual: la denuncia de la surfista Sarah Brady al actor Jonah Hill</h3>
+                <p>Redacción Malvestida - 11 julio, 2023</p>
+            </div>
+        </div>
+
+        <div class="div-container_seccion-4">
+            <div class="div-img">
+                <img
+                    src="https://i0.wp.com/malvestida.com/wp-content/uploads/2023/04/portadasitio_estarsoltera.png?resize=1068%2C785&ssl=1">
+            </div>
+            <div class="div-text">
+                <a href="Sexualidad">Sexualidad</a>
+                <h3>«No tener pareja no es estar sola» y otros antídotos para el amor Disney</h3>
+                <p>Cristina Salmerón - 26 abril, 2023</p>
+            </div>
+        </div>
+    </div>
+
+    <!--contenedor Cultura-->
+    <div class="div-container_background-purple dos">
+        <h3 class="title-bpd">Cultura</h3>
+        <div class="div-container_seccion-4">
+            <div class="div-img">
+                <img src="https://i0.wp.com/malvestida.com/wp-content/uploads/2023/08/portada_sitio_bullerengue.png?w=800&ssl=1"
+                    alt="Cultura">
+            </div>
+            <div class="div-text">
+                <a href="Cultura">Cultura</a>
+                <h3>Murió la cantante colombiana Ceferina Banquez, pero el bullerengue resiste</h3>
+                <p>Lesley Uribe - 25 agosto, 2023</p>
+            </div>
+        </div>
+
+        <div class="div-container_seccion-4">
+            <div class="div-img">
+                <img src="https://i0.wp.com/malvestida.com/wp-content/uploads/2023/08/portada_sitio_cinema-_queer.png?resize=768%2C567&ssl=1"
+                    alt="Cultura">
+            </div>
+            <div class="div-text">
+                <a href="Cultura">Cultura</a>
+                <h3>Cinema Queer 2023: un festival de cine diverso</h3>
+                <p>Arantza García - 21 agosto, 2023</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Mas contenido-->
+    <div class="div-container_masContenido">
+        <h3>Más contenido</h3>
+        <div class="div-container_One">
+            <div class="div-container-img">
+                <img src="https://i0.wp.com/malvestida.com/wp-content/uploads/2023/08/portada_sitio_bullerengue.png?w=800&ssl=1"
+                    alt="Cultura">
+            </div>
+
+            <div class="div-container_cultura">
+                <a href="Cultura">Cultura</a>
+                <h3>Murió la cantadora colombiana Ceferina Banquez, pero el bullerengue resiste</h3>
+                <p class="div-cultura_p">El pasado mes de julio la música colombiana perdió a una de sus cantadoras
+                    tradicionales de bullerengue. Ceferina Banquez falleció a la edad de...</p>
+            </div>
+
+            <div class="div-container_One">
+                <div class="div-container-img">
+                    <img src="https://i0.wp.com/malvestida.com/wp-content/uploads/2023/08/portada_otrasformas_justicia.png?resize=768%2C567&ssl=1"
+                        alt="Activismo">
+                </div>
+
+                <div class="div-container_cultura">
+                    <a href="Activismo">Activismo</a>
+                    <h3>¿Qué otras formas de justicia hay además de la cárcel?</h3>
+                    <p class="div-cultura_p">En Balance buscamos que nuestro trabajo como una organización feminista sea
+                        antipunitivista y que nuestros esfuerzos abonen a una construcción de otras formas de...</p>
+
+                </div>
+            </div>
+
+            <div class="div-container_One">
+                <div class="div-container-img">
+                    <img src="https://i0.wp.com/malvestida.com/wp-content/uploads/2023/08/portada_sitio_orgasmo.png?resize=768%2C567&ssl=1"
+                        alt="Sexualidad">
+                </div>
+
+                <div class="div-container_cultura">
+                    <a href="Sexualidad">Sexualidad</a>
+                    <h3>¿Cómo potenciar tus orgasmos y aumentar tu placer sexual? </h3>
+                    <p class="div-cultura_p">Existen diversos factores por los cuales una persona no puede o se le
+                        dificulta tener orgasmos. Si a ti también te pasa, no te...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container_prev-next">
+            <a href="" class="container_prev prev">
+                < </a>
+                    <a href="" class="container_next next"> > </a>
+        </div>
+        <footer>
+            <div class="div-container_background-purple">
+                <div class="container-footer">
+                    <a href="Sobre Malvestida">Sobre Malvestida</a>
+                    <a href="Colaboraciones">Colaboraciones</a>
+                    <a href="Contacto">Contacto</a>
+                    <a href="Política de privacidad">Política de privacidad</a>
+                </div>
+            </div>
+
+            <div class="nav-mobile_rrss">
+                <img src="./img/facebook_icon.png" alt="icon_facebook">
+                <img src="./img/instagram_icon.png" alt="icon_instagram">
+                <img src="./img/twitter_icon.png" alt="twitter_icon">
+            </div>
+
+            <a href="#top" class="boton-arriba">↑</a>
+        </footer>
+</body>
+
+</html>

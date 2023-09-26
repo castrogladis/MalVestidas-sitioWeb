@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MALVESTIDA</title>
+    <style>
+        * {
+           box-sizing: border-box;
+           margin: 0;
+           padding: 0;
+        }
+
+     .nav-menu_mobile {
+        display: flex;
+        background-color: antiquewhite;
+        flex-direction: column;
+        width: 758px; 
+        height: 100vh;
+        
+    }
+
+    .nav-mobile_rrss {
+        width: 300px;
+        padding: 30px;
+    }
+    .nav-mobile_rrss img{
+        margin-right: 50px;
+        height: 12px;
+    }
+
+    .nav-menu_mobile ul li{
+        font-size: 20px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        list-style: none;
+        margin: 25px 0 25px 0; 
+    }
+
+    .nav-menu_mobile ul li:hover{
+        color: blueviolet;
+    }
+
+    @media (min-width: 768px) {
+        .nav-menu_mobile {
+            width: 100%;
+        }
+        .nav-menu_mobile ul{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .nav-mobile_rrss {
+            width: 100%
+    }
+        .nav-mobile_rrss img {
+            display: none;
+        }
+    }
+    </style>
+</head>
+<body>
+    <nav class="nav-menu_mobile" >
+        <div class="nav-mobile_rrss">
+        <img src="./img/facebook_icon.png" alt="icon_facebook">
+        <img src="./img/instagram_icon.png" alt="icon_instagram"> 
+        <img src="./img/twitter_icon.png" alt="twitter_icon">
+
+        <ul>
+            <li><a href=""></a>Sexualidad</li>
+            <li><a href=""></a>Activismo</li>
+            <li><a href=""></a>Salud</li>
+            <li><a href=""></a>Cultura</li>
+            <li><a href=""></a>Estilo de Vida</li>
+            <li><a href=""></a>Estilo Personal</li>
+           </ul> 
+        </div>
+      
+    </nav>
+</body>
+</html>
